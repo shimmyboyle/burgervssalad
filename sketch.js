@@ -3,6 +3,8 @@
  * https://p5play.org
  */
 
+p5play.disableFriendlyErrors = true;
+
 // Game variables
 let instructions = 'BURGER vs SALAD';
 let box;
@@ -15,7 +17,7 @@ function preload() {
   saladImg = loadImage('Salad-2.png');
 }
 
-p5play.disableFriendlyErrors = true;
+
 
 function setup() {
   // Create a canvas that fills the screen
