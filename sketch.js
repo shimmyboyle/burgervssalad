@@ -40,6 +40,14 @@ function setup() {
 }
 
 function draw() {
+  // Check for splash screen again (in case it reappears)
+  let splashElements = document.querySelectorAll('div:not(main)');
+  splashElements.forEach(el => {
+    if (el.innerText && el.innerText.includes('MADE WITH P5 PLAY')) {
+      el.style.display = 'none';
+    }
+  });
+  
   // Clear and set background
   clear();
   background(0);
