@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <script src="https://q5js.org/q5.js"></script>
-    <script src="https://p5play.org/v3/planck.min.js"></script>
     <script>
-      // Add this line to disable friendly errors before loading p5play
-      window.p5PlaySettings = {
-        friendly: false
+      // Define global settings before loading any p5play files
+      window.p5play = {
+        autoPreload: true,
+        disableFriendlyErrors: true,
+        showSplashScreen: false // This specifically targets the splash screen
       };
     </script>
+    <script src="https://p5play.org/v3/planck.min.js"></script>
     <script src="https://p5play.org/v3/p5play.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
