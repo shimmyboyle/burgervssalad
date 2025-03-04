@@ -1,9 +1,13 @@
-/**
+Copy/**
  * Made with p5play!
  * https://p5play.org
  */
 
-//p5play.disableFriendlyErrors = true;
+// Attempt to disable splash screen in multiple ways
+if (window.p5play) {
+  window.p5play.showSplashScreen = false;
+  window.p5play.disableFriendlyErrors = true;
+}
 
 // Game variables
 let instructions = 'BURGER vs SALAD';
