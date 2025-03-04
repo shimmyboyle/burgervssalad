@@ -3,7 +3,7 @@
  * https://p5play.org
  */
 
-p5play.disableFriendlyErrors = true;
+//p5play.disableFriendlyErrors = true;
 
 // Game variables
 let instructions = 'BURGER vs SALAD';
