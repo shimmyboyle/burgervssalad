@@ -1,13 +1,7 @@
-Copy/**
+/**
  * Made with p5play!
  * https://p5play.org
  */
-
-// Attempt to disable splash screen in multiple ways
-if (window.p5play) {
-  window.p5play.showSplashScreen = false;
-  window.p5play.disableFriendlyErrors = true;
-}
 
 // Game variables
 let instructions = 'BURGER vs SALAD';
@@ -21,9 +15,15 @@ function preload() {
   saladImg = loadImage('Salad-2.png');
 }
 
-
-
 function setup() {
+  // Remove the splash screen if it exists
+  let splashElements = document.querySelectorAll('div:not(main)');
+  splashElements.forEach(el => {
+    if (el.innerText && el.innerText.includes('MADE WITH P5 PLAY')) {
+      el.style.display = 'none';
+    }
+  });
+  
   // Create a canvas that fills the screen
   new Canvas();
   
@@ -37,7 +37,6 @@ function setup() {
   foodGroup.collider = 'dynamic';
   foodGroup.rotationLock = true;
   foodGroup.bounciness = .9;
-  
 }
 
 function draw() {

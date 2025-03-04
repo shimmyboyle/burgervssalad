@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-      // Define global settings before loading any files
-      window.p5play = {
-        autoPreload: true,
-        disableFriendlyErrors: true,
-        showSplashScreen: false
-      };
-      // Additional approach
-      window.p5PlaySettings = {
-        friendly: false,
-        showSplash: false
-      };
-    </script>
     <script src="https://q5js.org/q5.js"></script>
     <script src="https://p5play.org/v3/planck.min.js"></script>
     <script src="https://p5play.org/v3/p5play.js"></script>
@@ -23,13 +10,6 @@
   <body>
     <main>
     </main>
-    <script>
-      // Try to disable splash screen again after libraries load but before your sketch
-      if (window.p5play) {
-        window.p5play.showSplashScreen = false;
-        window.p5play.disableFriendlyErrors = true;
-      }
-    </script>
     <script src="sketch.js"></script>
   </body>
 </html>
