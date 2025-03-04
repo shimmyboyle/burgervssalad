@@ -11,5 +11,26 @@
     <main>
     </main>
     <script src="sketch.js"></script>
+    <script>
+      // Wait for everything to load
+      window.addEventListener('load', function() {
+        // Log all div elements to console for debugging
+        console.log("All divs:", document.querySelectorAll('div'));
+        
+        // More aggressive approach to hide the splash screen
+        setTimeout(function() {
+          // Hide all divs that aren't part of the canvas or main element
+          document.querySelectorAll('body > div').forEach(function(el) {
+            console.log("Found element:", el);
+            if (!el.classList.contains('p5Canvas') && el.parentNode === document.body) {
+              console.log("Hiding element:", el);
+              el.style.display = 'none';
+              // Also try removing it completely
+              el.parentNode.removeChild(el);
+            }
+          });
+        }, 100); // Small delay to ensure splash screen has been created
+      });
+    </script>
   </body>
 </html>
